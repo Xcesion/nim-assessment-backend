@@ -9,5 +9,7 @@ menuRouter.post("/", menuController.create);
 // PUT endpoint
 menuRouter.put("/:id", menuController.update);
 menuRouter.delete("/:id", menuController.remove);
+menuRouter.use("/search", menuController.getSearch);
+menuRouter.get("/search", menuController.getSearch);
 
 module.exports = menuRouter;
