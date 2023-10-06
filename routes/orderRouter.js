@@ -10,6 +10,8 @@ orderRouter.put("/:id", orderController.update);
 orderRouter.delete("/:id", orderController.remove);
 orderRouter.get("/total-sales", orderController.getTotalSales);
 orderRouter.use("/total-sales", orderController.getTotalSales);
+orderRouter.use("/status", orderController.getOrdersByStatus);
+orderRouter.get("/status", orderController.getOrdersByStatus);
 
 
 module.exports = orderRouter;
